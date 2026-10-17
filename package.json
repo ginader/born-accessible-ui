@@ -1,0 +1,29 @@
+{
+  "name": "born-accessible-ui-starter-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agent Skill and Playwright + axe-core verification loop for born-accessible, AI-generated frontend code (a11yTO Conf 2026).",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Dirk Ginader",
+  "homepage": "https://github.com/ginader/born-accessible-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginader/born-accessible-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ginader/born-accessible-ui/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "demo": "node born-accessible-ui/scripts/audit.mjs examples --fail-on none",
+    "audit": "node born-accessible-ui/scripts/audit.mjs",
+    "lint": "node born-accessible-ui/scripts/lint.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "playwright": "^1.64.1"
+  }
+}

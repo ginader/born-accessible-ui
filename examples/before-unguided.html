@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudScale Dashboard (Unguided Default Output)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+    /* Unguided LLM pattern: div wrappers instead of landmarks, low-contrast tokens */
+    .sidebar {
+      background: #0f172a;
+      color: #64748b; /* Low contrast (3.7:1 on #0f172a) */
+      padding: 1.25rem;
+    }
+    .brand { color: #ffffff; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .nav-item { padding: 0.6rem 0.75rem; border-radius: 6px; cursor: pointer; }
+    .nav-item.active { background: #1e293b; color: #94a3b8; }
+    .workspace { padding: 1.75rem 2rem; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+    .title { font-size: 1.4rem; font-weight: 700; }
+    .btn-accent {
+      background: #60a5fa;
+      color: #ffffff; /* Low contrast (2.5:1 on #60a5fa) */
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem; }
+    .card-label { color: #94a3b8; font-size: 0.85rem; } /* Low contrast (2.5:1 on #ffffff) */
+    .card-val { font-size: 1.65rem; font-weight: 700; margin: 0.35rem 0; }
+    .badge-err {
+      background: #fee2e2;
+      color: #f87171; /* Low contrast (2.4:1 on #fee2e2) */
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="brand">CloudScale</div>
+    <div class="nav-item active" onclick="void(0)">Dashboard</div>
+    <div class="nav-item" onclick="void(0)">Instances</div>
+    <div class="nav-item" onclick="void(0)">Billing</div>
+  </div>
+  <div class="workspace">
+    <div class="topbar">
+      <div class="title">Dashboard</div>
+      <div>
+        <!-- Missing label on input and non-semantic div button -->
+        <input type="text" placeholder="Filter instances...">
+        <div class="btn-accent" role="button" tabindex="0">+ New Instance</div>
+      </div>
+    </div>
+    <div class="kpi-grid">
+      <div class="card">
+        <div class="card-label">Total Revenue</div>
+        <div class="card-val">$45,231</div>
+        <span class="badge-err">-3% vs last hour</span>
+      </div>
+      <div class="card">
+        <div class="card-label">Active Users</div>
+        <div class="card-val">2,405</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Server Load</div>
+        <div class="card-val">42%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
