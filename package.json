@@ -1,6 +1,6 @@
 {
   "name": "born-accessible-ui-starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Agent Skill and Playwright + axe-core verification loop for born-accessible, AI-generated frontend code (a11yTO Conf 2026).",
   "type": "module",
